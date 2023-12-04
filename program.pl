@@ -1,3 +1,4 @@
+main :- (
 % "Star Tricked Solution Template.pl"
 %
 % CECS 342 Assignment 4
@@ -57,8 +58,7 @@ solve :-
       
   % 4. Mr. 'Mr. Klatu' isn't the one whose object turned out to be a water tower.
   
-      % >>> Fill in your code here. <<<
-      
+  \+ member(('Mr. Klaatu', watertower, _), Events),      
       
   % Display a solution: An English sentence for each event.
   foreach(member(T, Events), report(T)).
@@ -67,3 +67,4 @@ solve :-
 report((Who, What, When)) :-
   write(Who), write(' saw the '), write(What),
   write(' on '), write(When), write('.'), nl.
+).
