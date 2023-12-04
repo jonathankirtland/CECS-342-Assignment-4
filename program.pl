@@ -39,18 +39,20 @@ solve :-
   %    than the one who saw the ballon, but at some point later in the week
   %    than the one who spotted the Frisbee (who isn't Ms. 'Ms. Gort').
   
-      % >>> Fill in your code here. <<<
+  earlier(FrisbeeDay, KlaatuDay),
+  earlier(KlaatuDay, BalloonDay),
+  \+ member(('Ms. Gort', frisbee, _), Events),
 
       
   % 2. Friday's sighting was made by either Ms. 'Ms. Barrada'
   %    or the one who saw the clothesline or both.
   
-      % >>> Fill in your code here. <<<
+  (member(('Ms. Barada', _, 'Friday'), Events); member((_, clothesline, 'Friday'), Events)),
       
       
   % 3. Mr. 'Mr. Nikto' did not make his sighting on 'Tuesday'.
   
-      % >>> Fill in your code here. <<<
+  \+ member(('Mr. Nikto', _, 'Tuesday'), Events),
       
       
   % 4. Mr. 'Mr. Klatu' isn't the one whose object turned out to be a water tower.
