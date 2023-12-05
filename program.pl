@@ -1,4 +1,3 @@
-main :- (
 % "Star Tricked Solution Template.pl"
 %
 % CECS 342 Assignment 4
@@ -67,4 +66,3 @@ solve :-
 report((Who, What, When)) :-
   write(Who), write(' saw the '), write(What),
   write(' on '), write(When), write('.'), nl.
-).
